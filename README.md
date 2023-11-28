@@ -27,6 +27,8 @@ A Flutter project demonstrating how to scan 1D and 2D barcodes to look up pharma
     flutter run
     # flutter run -d windows
     # flutter run -d edge
-    # flutter run -d linux
     ```
     ![pharma-look-up](https://github.com/yushulx/pharma-lookup/assets/2202306/c12bcbf0-cf88-4b8b-b97c-94bd1bd56d66)
+
+## Try Online Demo
+[https://yushulx.me/pharma-lookup/](https://yushulx.me/pharma-lookup/)
