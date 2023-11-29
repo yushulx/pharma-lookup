@@ -2,6 +2,12 @@
 
 A Flutter project demonstrating how to scan 1D and 2D barcodes to look up pharmaceutical information.
 
+
+
+https://github.com/yushulx/pharma-lookup/assets/2202306/21a5c49d-840e-418b-b293-cb206cbbd894
+
+
+
 ## Supported Platforms
 - **Web**
 - **Android**
