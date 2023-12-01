@@ -453,8 +453,7 @@ class OverlayPainter extends CustomPainter {
 
         if (!database.containsKey(result.text)) {
           final barcodePaint = Paint()
-            ..color =
-                Colors.blue.withOpacity(0.6) 
+            ..color = Colors.blue.withOpacity(0.6)
             ..style = PaintingStyle.fill;
           var path = Path();
 
@@ -483,7 +482,9 @@ class OverlayPainter extends CustomPainter {
           Pharma pharma = database[result.text]!;
           // Draw the background rectangle for the label
           final bgPaint1 = Paint()
-            ..color = Colors.green.withOpacity(0.6)
+            ..color = pharma.qualityCheckStatus == 'Passed'
+                ? Colors.green.withOpacity(0.6)
+                : Colors.red.withOpacity(0.6)
             ..style = PaintingStyle.fill;
           const double bgWidth = 220, bgHeight = 110;
 
@@ -659,8 +660,7 @@ class OverlayPainter extends CustomPainter {
 
           if (pharma.qualityCheckStatus == 'Passed') {
             final barcodePaint = Paint()
-              ..color =
-                  Colors.green.withOpacity(0.6) 
+              ..color = Colors.green.withOpacity(0.6)
               ..style = PaintingStyle.fill;
             var path = Path();
 
