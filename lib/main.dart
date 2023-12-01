@@ -18,14 +18,6 @@ class MyApp extends StatelessWidget {
   }
 
   Future<void> _fetchData() async {
-    // String jsonData =
-    //     '[{"id":"000123456128","name":"GLP1","quantity":1.5},{"id":"000123457286","name":"GLP2","quantity":2.5},{"id":"000123457118","name":"GLP3","quantity":3.5}]';
-    // List<dynamic> list = json.decode(jsonData);
-    // // Convert the list into a map with the 'id' as the key and the Pharma object as the value
-    // database = {
-    //   for (var item in list) item['id'] as String: Pharma.fromJson(item)
-    // };
-
     final response = await http.get(Uri.parse(
         'https://script.google.com/macros/s/AKfycbyPEx3THAbcLTNaJNOkQ1O3puTmQKXXOE_gkOGyKMzfIEUTr484qS8Dsi7-kTKpD333/exec'));
 

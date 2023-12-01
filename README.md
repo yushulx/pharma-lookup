@@ -1,13 +1,21 @@
-# Flutter Barcode Scanner
+# Pharma Lookup
 
-A Flutter project that demonstrates how to use [Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/overview/) to scan 1D and 2D barcodes on Android, iOS, Windows, Linux, and web.
+A Flutter project demonstrating how to scan 1D and 2D barcodes to look up pharmaceutical information.
+
+
+
+https://github.com/yushulx/pharma-lookup/assets/2202306/21a5c49d-840e-418b-b293-cb206cbbd894
+
+
 
 ## Supported Platforms
 - **Web**
 - **Android**
 - **iOS**
 - **Windows**
-- **Linux** (Without camera support)
+
+## Data Source
+[https://script.google.com/macros/s/AKfycbyPEx3THAbcLTNaJNOkQ1O3puTmQKXXOE_gkOGyKMzfIEUTr484qS8Dsi7-kTKpD333/exec](https://script.google.com/macros/s/AKfycbyPEx3THAbcLTNaJNOkQ1O3puTmQKXXOE_gkOGyKMzfIEUTr484qS8Dsi7-kTKpD333/exec)
 
 ## Getting Started
 1. Apply for a [30-day trial license](https://www.dynamsoft.com/customer/license/trialLicense/?product=dbr) and replace the license key in the `global.dart` file with your own:
@@ -28,8 +36,8 @@ A Flutter project that demonstrates how to use [Dynamsoft Barcode Reader](https:
     flutter run
     # flutter run -d windows
     # flutter run -d edge
-    # flutter run -d linux
     ```
-    
+    ![pharma-look-up](https://github.com/yushulx/pharma-lookup/assets/2202306/c12bcbf0-cf88-4b8b-b97c-94bd1bd56d66)
+
 ## Try Online Demo
-[https://yushulx.me/flutter-barcode-scanner/](https://yushulx.me/flutter-barcode-scanner/)
+[https://yushulx.me/pharma-lookup/](https://yushulx.me/pharma-lookup/)
