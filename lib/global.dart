@@ -451,21 +451,21 @@ class OverlayPainter extends CustomPainter {
         if (result.y3 < minY) minY = result.y3.toDouble();
         if (result.y4 < minY) minY = result.y4.toDouble();
 
-        final barcodePaint = Paint()
-          ..color =
-              Colors.green.withOpacity(0.6) // Yellow paint with 60% opacity
-          ..style = PaintingStyle.fill;
-        var path = Path();
-
-        path.moveTo(result.x1.toDouble(), result.y1.toDouble());
-        path.lineTo(result.x2.toDouble(), result.y2.toDouble());
-        path.lineTo(result.x3.toDouble(), result.y3.toDouble());
-        path.lineTo(result.x4.toDouble(), result.y4.toDouble());
-        path.close(); // Use it to close the path and complete the shape
-
-        canvas.drawPath(path, barcodePaint);
-
         if (!database.containsKey(result.text)) {
+          final barcodePaint = Paint()
+            ..color =
+                Colors.blue.withOpacity(0.6) 
+            ..style = PaintingStyle.fill;
+          var path = Path();
+
+          path.moveTo(result.x1.toDouble(), result.y1.toDouble());
+          path.lineTo(result.x2.toDouble(), result.y2.toDouble());
+          path.lineTo(result.x3.toDouble(), result.y3.toDouble());
+          path.lineTo(result.x4.toDouble(), result.y4.toDouble());
+          path.close();
+
+          canvas.drawPath(path, barcodePaint);
+
           TextPainter textPainter = TextPainter(
             text: TextSpan(
               text: result.text,
@@ -656,6 +656,36 @@ class OverlayPainter extends CustomPainter {
               minWidth: 0, maxWidth: size.width);
           qualityCheckStatusValuePainter.paint(canvas,
               Offset(padding + minX + xSpacing, minY + 4 * ySpacing + padding));
+
+          if (pharma.qualityCheckStatus == 'Passed') {
+            final barcodePaint = Paint()
+              ..color =
+                  Colors.green.withOpacity(0.6) 
+              ..style = PaintingStyle.fill;
+            var path = Path();
+
+            path.moveTo(result.x1.toDouble(), result.y1.toDouble());
+            path.lineTo(result.x2.toDouble(), result.y2.toDouble());
+            path.lineTo(result.x3.toDouble(), result.y3.toDouble());
+            path.lineTo(result.x4.toDouble(), result.y4.toDouble());
+            path.close();
+
+            canvas.drawPath(path, barcodePaint);
+          } else {
+            final barcodePaint = Paint()
+              ..color =
+                  Colors.red.withOpacity(0.6) // Red paint with 60% opacity
+              ..style = PaintingStyle.fill;
+            var path = Path();
+
+            path.moveTo(result.x1.toDouble(), result.y1.toDouble());
+            path.lineTo(result.x2.toDouble(), result.y2.toDouble());
+            path.lineTo(result.x3.toDouble(), result.y3.toDouble());
+            path.lineTo(result.x4.toDouble(), result.y4.toDouble());
+            path.close();
+
+            canvas.drawPath(path, barcodePaint);
+          }
         }
       }
     }
