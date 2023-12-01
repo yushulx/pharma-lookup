@@ -38,7 +38,7 @@ https://github.com/yushulx/pharma-lookup/assets/2202306/21a5c49d-840e-418b-b293-
     # flutter run -d edge
     ```
  
-    ![pharma-lookup](https://github.com/yushulx/pharma-lookup/assets/2202306/aca5c642-7c58-4337-a81f-7a29ee8c8b68)
+    ![pharma-look-up](https://github.com/yushulx/pharma-lookup/assets/2202306/597d3d1c-0dc0-42ea-aa3b-c6f5266e00a2)
 
 
 ## Try Online Demo
